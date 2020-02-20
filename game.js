@@ -35,6 +35,9 @@ function hide (evt) {
   updateCounts()
 }
 
+
+// variable totals is an object, i need to have a system that updates the counts in these objects. I need to link it to the count of blue, green or invisible classes? 
+// Make an array then use the array length to find the totals? getElementsByClassName use 
 function updateCounts () {
   var totals = {
     blue: 0,
@@ -44,7 +47,14 @@ function updateCounts () {
   
   // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
 
-  // Once you've done the counting, this function will update the display
+  var countB = document.getElementsByClassName('blue');
+  var countG = document.getElementsByClassName('green');
+  var countI = document.getElementsByClassName('invisible')
+totals.blue = countB.length;
+totals.green = countG.length;
+totals.invisible = countI.length;
+
+
   displayTotals(totals)
 }
 
