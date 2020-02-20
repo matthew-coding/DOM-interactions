@@ -28,6 +28,11 @@ function makeBlue (evt) {
   updateCounts()
 }
 // CREATE FUNCTION hide HERE
+//Write a function hide that takes an evt parameter. It'll look almost exactly the same as the first two event handlers, but add the class invisible. Don't forget to call updateCounts() at the end of the function.
+function hide (evt) {
+  evt.target.classList.toggle('invisible')
+  updateCounts()
+}
 
 function updateCounts () {
   var totals = {
